@@ -1,0 +1,22 @@
+<% include partials/header %>
+<h1>The Post Page</h1>
+<p>This is using a for loop</p>
+<% for (var i=0; i<post.length; i++){ %>
+
+<li> <%= post[i].title %> -  <strong><%= post[i].author %></strong></li>
+
+<% } %>
+<br>
+<br><br>
+<p>This is a seperator line between the post</p>
+<p>This is using a forEach Loop</p>
+
+<!-- this is how it is normally done -->
+
+<% post.forEach(function(post){ %>
+   
+   <li> <%= post.title %> -  <strong><%= post.author %></strong></li> 
+    
+<% }) %>
+
+<% include partials/footer %>
